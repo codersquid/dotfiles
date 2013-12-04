@@ -1,0 +1,56 @@
+PAGER=less
+JAVA_HOME=/usr/lib/jvm/java-7-oracle/
+PATH=$HOME/bin:$PATH
+
+# Amazon web services
+export EC2_KEYPAIR="workpair"
+export EC2_URL=https://ec2.us-east-1.amazonaws.com
+export EC2_PRIVATE_KEY="$(/bin/ls $HOME/.ec2/pk-*.pem)"
+export EC2_CERT="$(/bin/ls $HOME/.ec2/cert-*.pem)"
+
+#HISTIGNORE="set -o *:shopt -s *:ls:exit"
+HISTCONTROL="ignoreboth"
+
+set -o history
+set -o ignoreeof
+shopt -s cdspell
+shopt -s cdable_vars
+shopt -s checkhash
+shopt -s checkwinsize
+shopt -s sourcepath
+shopt -s histappend
+shopt -s histreedit
+shopt -s extglob
+
+alias ls='ls -FG'
+alias l.='ls -FGd .*'
+alias more='less'
+alias vi='vim'
+alias b="./build.sh"
+alias t="./test.sh"
+alias gentag="/usr/local/bin/ctags -R --fields=+iaS --extra=+q ."
+alias exit='history -a; exit'
+alias prettyjson='python -mjson.tool'
+
+function vifind() { vi `find . -name '*'$1'*'` ; }
+function ff() { find . -name '*'$1'*' ; }
+function findinjar() {
+        for i in `find $1 -name '*.jar'`; do
+                echo $i; jar -tf $i | grep $2
+        done
+}
+
+if [ -f ~/.django.sh ]; then
+    . ~/.django.sh
+fi
+
+if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
+    . /usr/local/bin/virtualenvwrapper.sh
+fi
+export WORKON_HOME=${HOME}/venvs
+
+# git@github.com:codersquid/bash-help.git
+if [ -f ~/.bash-help/git-simple-prompt.sh ]; then
+    . ~/.bash-help/git-simple-prompt.sh
+    PROMPT_COMMAND=git_simple_prompt
+fi
