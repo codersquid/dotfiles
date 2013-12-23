@@ -1,3 +1,4 @@
+EDITOR=vim
 PAGER=less
 JAVA_HOME=/usr/lib/jvm/java-7-oracle/
 PATH=$HOME/bin:$PATH
@@ -26,8 +27,6 @@ alias ls='ls -FG'
 alias l.='ls -FGd .*'
 alias more='less'
 alias vi='vim'
-alias b="./build.sh"
-alias t="./test.sh"
 alias gentag="/usr/local/bin/ctags -R --fields=+iaS --extra=+q ."
 alias exit='history -a; exit'
 alias prettyjson='python -mjson.tool'
@@ -40,17 +39,13 @@ function findinjar() {
         done
 }
 
-if [ -f ~/.django.sh ]; then
-    . ~/.django.sh
-fi
-
 if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
     . /usr/local/bin/virtualenvwrapper.sh
 fi
 export WORKON_HOME=${HOME}/venvs
 
 # git@github.com:codersquid/bash-help.git
-if [ -f ~/.bash-help/git-simple-prompt.sh ]; then
-    . ~/.bash-help/git-simple-prompt.sh
+if [ -f ~/.dotfiles/bash-help/git-simple-prompt.sh ]; then
+    . ~/.dotfiles/bash-help/git-simple-prompt.sh
     PROMPT_COMMAND=git_simple_prompt
 fi
