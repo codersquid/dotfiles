@@ -1,6 +1,0 @@
-[submodule "vimdots"]
-	path = vimdots
-	url = git@github.com:codersquid/vimdots.git
-[submodule "bash-help"]
-	path = bash-help
-	url = git@github.com:codersquid/bash-help.git
