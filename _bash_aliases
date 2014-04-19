@@ -51,13 +51,15 @@ if [ -f ~/.bash-help/git-simple-prompt.sh ]; then
     PROMPT_COMMAND=git_simple_prompt
 fi
 
-#if [ -d $HOME/.pyenv ]; then
-#    export PYENV_ROOT="$HOME/.pyenv"
-#    export PATH="$PYENV_ROOT/bin:$PATH"
-#    eval "$(pyenv init -)"
+
+export WORKON_HOME=~/venvs
+#if [ -f /usr/local/virtualenvwrapper.sh ]; then
+#    . /usr/local/virtualenvwrapper.sh;
 #fi
 
-if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
-    . /usr/local/bin/virtualenvwrapper.sh
-    export WORKON_HOME=${HOME}/venvs
+source "${HOME}/.pip_bootstrap_profile.sh";
+
+
+if [ -f ~/.bash_rackspace ]; then
+    . ~/.bash_rackspace
 fi
