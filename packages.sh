@@ -18,7 +18,5 @@ sudo apt-get install -y \
     htop \
     ack-grep
 
-wget https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py
 wget https://raw.github.com/pypa/pip/master/contrib/get-pip.py
-sudo python ez_setup.py
 sudo python get-pip.py
