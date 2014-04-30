@@ -52,11 +52,6 @@ if [ -f ~/.bash-help/git-simple-prompt.sh ]; then
 fi
 
 
-export WORKON_HOME=~/venvs
-#if [ -f /usr/local/virtualenvwrapper.sh ]; then
-#    . /usr/local/virtualenvwrapper.sh;
-#fi
-
 source "${HOME}/.pip_bootstrap_profile.sh";
 
 
