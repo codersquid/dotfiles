@@ -10,7 +10,7 @@ sudo apt-get install -y \
     build-essential \
     git \
     tig \
-    vim \
+    vim-nox \
     exuberant-ctags \
     multitail \
     curl \
