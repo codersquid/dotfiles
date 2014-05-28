@@ -17,6 +17,3 @@ sudo apt-get install -y \
     tmux \
     htop \
     ack-grep
-
-wget https://raw.github.com/pypa/pip/master/contrib/get-pip.py
-sudo python get-pip.py
