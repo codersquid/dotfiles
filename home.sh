@@ -4,11 +4,9 @@ set -e
 
 cd
 
-git clone https://github.com/codersquid/dotfiles.git .dotfiles
-git clone https://github.com/codersquid/vimdots.git .vim
-git clone https://github.com/codersquid/bash-help.git .bash-help
+git clone git@github.com:codersquid/dotfiles.git .dotfiles
+git clone git@github.com:codersquid/vimdots.git .vim
 
-ln -s .dotfiles/_bash_aliases .bash_aliases
 ln -s .dotfiles/_tmux.conf .tmux.conf
 
 cd .vim
