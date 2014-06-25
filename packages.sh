@@ -16,4 +16,5 @@ sudo apt-get install -y \
     curl \
     tmux \
     htop \
-    ack-grep
+    ack-grep \
+    zsh
