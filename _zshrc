@@ -62,13 +62,17 @@ alias prettyjson='python -mjson.tool'
 function ff() { find . -name '*'$1'*' ; }
 function vifind() { find . -name '*'$1'*' -exec vim {} + ; }
 
-export RAX_CREDS_FILE="$HOME/.pyrax.cfg"
+export RAX_CREDS_FILE="$HOME/.rax_vid"
 export EDITOR=vim
 export PAGER=less
 export PATH="$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 
-if [[ -f $HOME/.django.sh ]] then
-    source $HOME/.django.sh
+export DEBFULLNAME="Sheila Miguez"
+export DEBEMAIL="sheila.miguez@canonical.com"
+export GPGKEY=AD168F70
+
+if [[ -f $HOME/.secrets ]] then
+    source $HOME/.secrets
 fi
 
 if [[ -d /usr/lib/jvm/java-6-oracle/ ]]; then
@@ -101,3 +105,5 @@ fi
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
