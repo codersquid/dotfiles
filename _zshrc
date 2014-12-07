@@ -13,7 +13,7 @@ ZSH_THEME="sheila"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
+CASE_SENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
@@ -55,35 +55,9 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-alias more='less'
-alias vi='vim'
-alias l.='ls -FGd .*'
-alias prettyjson='python -mjson.tool'
-function ff() { find . -name '*'$1'*' ; }
-function vifind() { find . -name '*'$1'*' -exec vim {} + ; }
-
-export RAX_CREDS_FILE="$HOME/.rax_vid"
-export EDITOR=vim
-export PAGER=less
-export PATH="$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
-
-export DEBFULLNAME="Sheila Miguez"
-export DEBEMAIL="sheila.miguez@canonical.com"
-export GPGKEY=AD168F70
-
-if [[ -f $HOME/.secrets ]] then
-    source $HOME/.secrets
+if [[ -f $HOME/.dotfiles/_aliases]] then
+    source $HOME/.dotfiles/_aliases
 fi
-
-if [[ -d /usr/lib/jvm/java-6-oracle/ ]]; then
-    export JAVA_HOME=/usr/lib/jvm/java-6-oracle/
-fi
-#if [[ -d /usr/lib/jvm/java-8-oracle/ ]]; then
-#   export JAVA_HOME=/usr/lib/jvm/java-8-oracle/
-#i
-
-
-
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -105,5 +79,3 @@ fi
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
