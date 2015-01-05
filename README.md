@@ -1,11 +1,6 @@
-dotfiles
-========
+home files
+==========
 
-bash aliases and dot files
+not much to see here.
 
-default .bashrc files usually have
-```
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
-```
+this is in flux since I'm playing around with ohmyzsh.
