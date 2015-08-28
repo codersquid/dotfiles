@@ -1,0 +1,3 @@
+[submodule "gitbashr"]
+	path = gitbashr
+	url = https://github.com/codersquid/gitbashr.git
