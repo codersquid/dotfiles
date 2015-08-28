@@ -33,8 +33,8 @@ shopt -s histappend
 shopt -s histreedit
 shopt -s extglob
 
-alias ls='ls -FG'
-alias l.='ls -FGd .*'
+alias ls='ls -FG --color=auto'
+alias l.='ls -FGd .* --color=auto'
 alias more='less'
 alias vi='vim'
 alias prettyjson='python -mjson.tool'
