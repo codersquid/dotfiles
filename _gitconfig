@@ -1,0 +1,13 @@
+[user]
+	name = Sheila Miguez
+	email = github@codersquid.com
+[push]
+	default = matching
+[merge]
+	tool = meld
+[core]
+	excludesfile = /home/sheila/.gitignore_global
+[url "git+ssh://codersquid@git.launchpad.net/"]
+    insteadof = lp:
+[url "git+ssh://codersquid@git.launchpad.net/~codersquid/+git/"]
+    insteadof = lpme:
