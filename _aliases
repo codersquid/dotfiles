@@ -6,17 +6,18 @@ function ff() { find . -name '*'$1'*' ; }
 function vifind() { find . -name '*'$1'*' -exec vim {} + ; }
 alias shuttledns sshuttle --dns -vvr starkravingsane.org 0/0
 alias shuttlevpn sshuttle -r starkravingsane.org 0/0 -v
-#alias miniconda="export PATH=$HOME/apps/miniconda3/bin;$PATH"
+alias miniconda="export PATH=$HOME/apps/miniconda3/bin:$PATH"
 
 export GOPATH=$HOME/gopath
 export EDITOR=vim
 export PAGER=less
-export PATH="/snap/bin:$HOME/bin:$HOME/.juju-plugins:$GOPATH/bin:$HOME/apps/miniconda3/bin:$PATH"
+#export PATH="/snap/bin:$HOME/bin:$HOME/.juju-plugins:$GOPATH/bin:$HOME/apps/miniconda3/bin:$PATH"
+export PATH="/snap/bin:$HOME/bin:$HOME/.juju-plugins:$GOPATH/bin:$PATH"
 
 export DEBFULLNAME="Sheila Miguez"
 export DEBEMAIL="sheila.miguez@canonical.com"
 export GPGKEY=AD168F70
 
-if [[ -f $HOME/.secrets ]] then
-    source $HOME/.secrets
+if [[ -f $HOME/.aliases_local ]] then
+    source $HOME/.aliases_local
 fi
