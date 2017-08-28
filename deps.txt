@@ -1,0 +1,17 @@
+build-essentials
+curl
+exuberant-ctags
+git
+git-extras
+golang
+htop
+python-dev
+python-pkg-resources
+python-setuptools
+python-virtualenv
+tig
+tmux
+tree
+unzip
+vim-nox
+zsh
