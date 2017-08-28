@@ -6,8 +6,10 @@
 [merge]
 	tool = meld
 [core]
-	excludesfile = /home/sheila/.gitignore_global
-[url "git+ssh://codersquid@git.launchpad.net/"]
+	excludesfile = /home/codersquid/.gitignore_global
+[url "git+ssh://git.launchpad.net/"]
     insteadof = lp:
-[url "git+ssh://codersquid@git.launchpad.net/~codersquid/+git/"]
+[url "git+ssh://git.launchpad.net/~codersquid/+git/"]
     insteadof = lpme:
+[color]
+	ui = auto
