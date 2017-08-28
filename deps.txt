@@ -1,4 +1,4 @@
-build-essentials
+build-essential
 curl
 exuberant-ctags
 git
