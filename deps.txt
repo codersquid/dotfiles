@@ -9,6 +9,7 @@ python-dev
 python-pkg-resources
 python-setuptools
 python-virtualenv
+silversearcher-ag
 tig
 tmux
 tree
