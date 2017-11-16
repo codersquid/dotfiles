@@ -1,0 +1,27 @@
+alias more='less'
+alias vi='vim'
+alias l.='ls -FGd .*'
+alias prettyjson='python -mjson.tool'
+function ff() { find . -name '*'$1'*' ; }
+function vifind() { find . -name '*'$1'*' -exec vim {} + ; }
+
+export GOPATH=$HOME/go
+export EDITOR=vim
+export PAGER=less
+export PATH="/snap/bin:$GOPATH/bin:$HOME/bin:$HOME/.local/bin:$PATH"
+
+export DEBFULLNAME="Sheila Miguez"
+export DEBEMAIL="sheila.miguez@canonical.com"
+export GPGKEY=AD168F70
+
+if [ -f $HOME/.aliases_local ]; then
+    source $HOME/.aliases_local
+fi
+
+if [ -f ~/.git-prompt.sh ]; then                                                                                      
+    . ~/.git-prompt.sh                                                                                                
+    GIT_PS1_SHOWCOLORHINTS=true                                                                                       
+    GIT_PS1_SHOWDIRTYSTATE=true                                                                                       
+    GIT_PS1_SHOWCOLORHINTS=true                                                                                       
+    PROMPT_COMMAND='__git_ps1 "\u@\h:\w" "\\n\\\$ "'                                                                  
+fi
