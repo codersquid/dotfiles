@@ -10,7 +10,7 @@ alias shuttlevpn sshuttle -r starkravingsane.org 0/0 -v
 export GOPATH=$HOME/go
 export EDITOR=vim
 export PAGER=less
-export PATH="/snap/bin:$GOPATH/bin:$HOME/bin:$PATH"
+export PATH="/snap/bin:$GOPATH/bin:$HOME/bin:$HOME/.local/bin:$PATH"
 
 export DEBFULLNAME="Sheila Miguez"
 export DEBEMAIL="sheila.miguez@canonical.com"
