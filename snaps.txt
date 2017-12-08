@@ -1,0 +1,10 @@
+asciinema
+canonical-livepatch
+charm
+gimp
+juju
+keepassxc
+mojo
+petname
+telegram-latest
+vlc
