@@ -15,3 +15,4 @@ tmux
 tree
 vim-nox
 zsh
+mosh
