@@ -6,6 +6,7 @@ function ff() { find . -name '*'$1'*' ; }
 function vifind() { find . -name '*'$1'*' -exec vim {} + ; }
 alias shuttledns sshuttle --dns -vvr starkravingsane.org 0/0
 alias shuttlevpn sshuttle -r starkravingsane.org 0/0 -v
+alias df="df -x squashfs"
 
 export GOPATH=$HOME/go
 export EDITOR=vim
