@@ -13,3 +13,5 @@
     insteadof = lpme:
 [color]
 	ui = auto
+[pager]
+	branch = false
