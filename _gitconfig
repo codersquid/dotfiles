@@ -15,3 +15,5 @@
 	ui = auto
 [pager]
 	branch = false
+    diff = false
+    stash = false
